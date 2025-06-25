@@ -37,6 +37,25 @@ header, .card{
     z-index: 0;
 }
 
+.msg{
+    position: absolute;
+    top: 0;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 2;    
+}
+
+.msg a{
+    font-size: 30px;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #080E0F;
+}
+
 .envelope{
     position: absolute;
     height: 100%;
@@ -64,7 +83,7 @@ header, .card{
 }
 
 /* levels*/
-.lid.one{
+ .lid.one{
     border-top:100px solid #056c05 ;
     transform: rotateX(0deg);
     transition-delay: 0.75s;
@@ -75,7 +94,7 @@ header, .card{
     transform: rotateX(90deg);
     transition-delay: 0.5s;
     z-index: 2;
-}
+} 
 
 .button {
     background-color: transparent;
@@ -98,7 +117,10 @@ header, .card{
     transform: rotateX(180deg);
     transition-delay: 0.25s;
 }
-
+.card:hover .msg{
+    transform: translateY(-50px);
+    transition-delay: 0.25s;
+}
 @keyframes led {
     0% {
         border: 1.5px solid #00ff00;

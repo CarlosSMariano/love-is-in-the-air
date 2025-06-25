@@ -60,18 +60,20 @@ header, .card{
     border-left: 150px solid transparent;
     border-bottom: 100px solid transparent;
     transform-origin: top;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.25s linear;
 }
 
 /* levels*/
 .lid.one{
     border-top:100px solid #056c05 ;
     transform: rotateX(0deg);
+    transition-delay: 0.75s;
     z-index: 3;
 }
 .lid.two{
     border-top:100px solid #00ff00;
     transform: rotateX(90deg);
+    transition-delay: 0.5s;
     z-index: 2;
 }
 
@@ -88,6 +90,14 @@ header, .card{
     animation: led 5s infinite alternate;
 }
 
+.card:hover .lid.one{
+    transform: rotateX(90deg);
+    transition-delay: 0s;
+}
+.card:hover .lid.two{
+    transform: rotateX(180deg);
+    transition-delay: 0.25s;
+}
 
 @keyframes led {
     0% {

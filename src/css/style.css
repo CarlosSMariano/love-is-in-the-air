@@ -1,0 +1,107 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Bagel Fat One", system-ui;
+}
+
+body {
+    background: #080E0F;
+    color: #FFFF;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header, .card{
+    margin-bottom: 50px;
+}
+
+.card{
+    background-color: #00ff00;
+    height: 200px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.envelope{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-top: 100px solid transparent;
+    border-left: 150px solid #20a820;
+    border-right: 150px solid #0ac00a;
+    border-bottom: 100px solid #0ac00a;
+    z-index: 3;
+}
+
+.lid{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    border-bottom: 100px solid transparent;
+    transform-origin: top;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* levels*/
+.lid.one{
+    border-top:100px solid #056c05 ;
+    transform: rotateX(0deg);
+    z-index: 3;
+}
+.lid.two{
+    border-top:100px solid #00ff00;
+    transform: rotateX(90deg);
+    z-index: 2;
+}
+
+.button {
+    background-color: transparent;
+    color: #FFFF;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1.5px solid #00ff00;
+    padding: 20px 40px;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+    animation: led 5s infinite alternate;
+}
+
+
+@keyframes led {
+    0% {
+        border: 1.5px solid #00ff00;
+        box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+    }
+
+    50% {
+        border: 1.5px solid #00ff0096;
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+
+    100% {
+        border: 1.5px solid #00ff00;
+        box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+    }
+}

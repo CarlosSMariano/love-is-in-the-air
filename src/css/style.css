@@ -1,4 +1,5 @@
 /* imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
 
 
@@ -6,12 +7,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"Bagel Fat One", system-ui;
+    /* font-family: "Bagel Fat One", system-ui; */
+    font-family: "Roboto", sans-serif;
 }
 
 body {
     background: #080E0F;
     color: #FFFF;
+    overflow: hidden;
 }
 
 main {
@@ -22,11 +25,89 @@ main {
     height: 100vh;
 }
 
-header, .card{
+/* authentication */
+
+#authentication {
+    background: #042d18;
+    width: 25%;
+    height: 48%;
+    padding: 2%;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+    animation: led 5s infinite alternate;
+}
+
+.header-authentication {
+    text-align: center;
+}
+
+.header-authentication h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.header-authentication p {
+    font-size: 17px;
+    font-weight: 200;
+}
+
+.form-authenticate {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-authenticate input {
+    padding: 3%;
+    width: 100%;
+    font-size: 23px;
+    background: #080E0F;
+    border: none;
+    outline: none;
+    color: #FFFF;
+    margin-bottom: 10px;
+}
+
+.form-authenticate label {
+    margin-bottom: 30px;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.form-authenticate button {
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #12ab12;
+    color: #FFFEFE;
+    ;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form-authenticate button:hover {
+    background-color: #11a111;
+}
+
+.form-authenticate button:active {
+    background-color: #0f830f;
+    color: #b6b6b6;
+}
+
+/* message */
+
+#message {
+    display: none;
+}
+
+header,
+.background-envelope {
     margin-bottom: 50px;
 }
 
-.card{
+.background-envelope {
     background-color: #00ff00;
     height: 200px;
     width: 300px;
@@ -37,7 +118,7 @@ header, .card{
     z-index: 0;
 }
 
-.msg{
+.msg {
     position: absolute;
     top: 0;
     width: 80%;
@@ -46,17 +127,17 @@ header, .card{
     border-radius: 15px;
     text-align: center;
     transition: 0.5s;
-    z-index: 2;    
+    z-index: 2;
 }
 
-.msg a{
+.msg a {
     font-size: 30px;
     margin-top: 30px;
     text-decoration: none;
     color: #080E0F;
 }
 
-.envelope{
+.envelope {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -69,7 +150,7 @@ header, .card{
     z-index: 3;
 }
 
-.lid{
+.lid {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -83,57 +164,49 @@ header, .card{
 }
 
 /* levels*/
- .lid.one{
-    border-top:100px solid #056c05 ;
+.lid.one {
+    border-top: 100px solid #056c05;
     transform: rotateX(0deg);
     transition-delay: 0.75s;
     z-index: 3;
 }
-.lid.two{
-    border-top:100px solid #00ff00;
+
+.lid.two {
+    border-top: 100px solid #00ff00;
     transform: rotateX(90deg);
     transition-delay: 0.5s;
     z-index: 2;
-} 
-
-.button {
-    background-color: transparent;
-    color: #FFFF;
-    font-size: 14px;
-    text-transform: uppercase;
-    border: 1.5px solid #00ff00;
-    padding: 20px 40px;
-    border-radius: 60px;
-    cursor: pointer;
-    box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
-    animation: led 5s infinite alternate;
 }
 
-.card:hover .lid.one{
+
+.background-envelope:hover .lid.one {
     transform: rotateX(90deg);
     transition-delay: 0s;
 }
-.card:hover .lid.two{
+
+.background-envelope:hover .lid.two {
     transform: rotateX(180deg);
     transition-delay: 0.25s;
 }
-.card:hover .msg{
+
+.background-envelope:hover .msg {
     transform: translateY(-50px);
     transition-delay: 0.25s;
 }
+
 @keyframes led {
     0% {
-        border: 1.5px solid #00ff00;
+
         box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
     }
 
     50% {
-        border: 1.5px solid #00ff0096;
+
         box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
     }
 
     100% {
-        border: 1.5px solid #00ff00;
+
         box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
     }
 }

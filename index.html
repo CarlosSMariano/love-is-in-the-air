@@ -10,15 +10,38 @@
 
 <body>
     <main>
-        <header>
-            <h1>For the love of my life❤️</h1>
-        </header>
-        <section class="card">
-            <div class="lid one"></div>
-            <div class="lid two"></div>
-            <div class="envelope"></div>
-            <div class="msg">
-                <a href="./src/pages/home.html">Olhar</a>
+
+        <section id="authentication">
+            <header class="header-authentication">
+                <h1>
+                    Caixa de mensagens
+                </h1>
+                <p>Faça o cadastro abaixo e veja suas mensagens</p>
+            </header>
+
+            <form class="form-authenticate">
+                
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <label for="name"><strong>Data:</strong> Apelido</label>
+                
+                    <input type="password" name="password" id="password" placeholder="password">
+                    <label for="password"><strong>Data:</strong> Data</label>
+                
+                <button type="button" onclick="authenticate()"> Verificar</button>
+            </form>
+        </section>
+
+        <section id="message">
+            <header>
+                <h1>For the love of my life❤️</h1>
+            </header>
+            <div class="background-envelope">
+                <div class="lid one"></div>
+                <div class="lid two"></div>
+                <div class="envelope"></div>
+                <div class="msg">
+                    <a href="./src/pages/home.html">Olhar</a>
+                </div>
             </div>
         </section>
     </main>
@@ -26,4 +49,5 @@
     <script src="./src/js/script.js
     "></script>
 </body>
+
 </html>

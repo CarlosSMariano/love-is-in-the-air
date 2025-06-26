@@ -29,9 +29,8 @@ main {
 
 #authentication {
     background: #042d18;
-    width: 25%;
-    height: 48%;
-    padding: 2%;
+    width: 47%;
+    padding: 5%;
     border-radius: 16px;
     border: none;
     box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
@@ -209,4 +208,14 @@ header,
 
         box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
     }
+}
+
+/* responsiviti */
+
+@media (max-width: 123px) {
+    #authentication {
+        width: 57%;
+        padding: 2%;
+    }
+
 }

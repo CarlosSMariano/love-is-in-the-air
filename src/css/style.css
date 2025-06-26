@@ -80,7 +80,6 @@ main {
     border: none;
     background-color: #12ab12;
     color: #FFFEFE;
-    ;
     text-transform: uppercase;
     font-size: 20px;
     cursor: pointer;
@@ -212,10 +211,42 @@ header,
 
 /* responsiviti */
 
-@media (max-width: 123px) {
+@media (max-width: 650px) {
     #authentication {
-        width: 57%;
-        padding: 2%;
+        width: 80%;
+        padding: 4%;
+    }
+
+    .header-authentication h1 {
+        font-size: 28px;
+    }
+
+    .header-authentication p {
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    .form-authenticate input {
+    padding: 3%;
+    font-size: 18px;
+    
+}
+
+.form-authenticate button {
+    padding: 15px;
+    font-size: 15px;
+}
+
+}
+
+@media (max-width: 450px) {
+    .header-authentication h1 {
+        font-size: 25px;
+    }
+
+    .header-authentication p {
+        font-size: 12px;
+        font-weight: 200;
     }
 
 }

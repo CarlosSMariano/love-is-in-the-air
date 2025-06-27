@@ -28,6 +28,7 @@ main {
 /* authentication */
 
 #authentication {
+    position: absolute;
     background: #042d18;
     width: 47%;
     padding: 5%;
@@ -35,20 +36,27 @@ main {
     border: none;
     box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
     animation: led 5s infinite alternate;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#authentication.hide {
+    opacity: 0;
+    transform: translateY(-100px);
 }
 
 .header-authentication {
+    margin-bottom: 50px;
     text-align: center;
 }
 
 .header-authentication h1 {
-    font-size: 30px;
+    font-size: 35px;
     text-transform: uppercase;
     font-weight: bolder;
 }
 
 .header-authentication p {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 200;
 }
 
@@ -97,12 +105,26 @@ main {
 /* message */
 
 #message {
-    display: none;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease-in, transform 0.8s ease-in, visibility 0.8s ease-in;
 }
 
-header,
+#message.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.message-header,
 .background-envelope {
     margin-bottom: 50px;
+}
+
+.message-header {
+    text-align: center;
 }
 
 .background-envelope {
@@ -227,15 +249,15 @@ header,
     }
 
     .form-authenticate input {
-    padding: 3%;
-    font-size: 18px;
-    
-}
+        padding: 3%;
+        font-size: 18px;
 
-.form-authenticate button {
-    padding: 15px;
-    font-size: 15px;
-}
+    }
+
+    .form-authenticate button {
+        padding: 15px;
+        font-size: 15px;
+    }
 
 }
 

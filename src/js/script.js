@@ -1,3 +1,4 @@
+// ANIMATION OF LETTER
 const apelidoInput = document.getElementById("name");
 const password = document.getElementById("password");
 
@@ -8,9 +9,9 @@ const dados = {
 
 function authenticate() {
     if (containsBlank()) {
-        if (apelidoInput.value.toLowerCase() == dados.nameCorrect.toLowerCase() && password.value == dados.passCorrect)
+        const apelido = apelidoInput.value.replace(/\s/g, "");
+        if (apelido.toLowerCase() == dados.nameCorrect.toLowerCase() && password.value == dados.passCorrect)
             handleSlideTransition()
-
         else
             alert("Usuário ou senha incorretos")
 

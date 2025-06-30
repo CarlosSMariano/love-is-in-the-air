@@ -16,18 +16,16 @@
 
 body {
     background: #080E0F;
-    padding: 20px;
-    height: 100vh;
     overflow: hidden;
+    padding: 0 20px;
+    
+
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    /* Permite que o main ocupe a largura total disponível pelo body */
-    height: 100vh;
+      display: grid;
+  place-items: center;  
+  height: 100vh;
 }
 
 h1,

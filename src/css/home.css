@@ -10,20 +10,14 @@
     font-family: "Roboto", sans-serif;
 }
 
-:root {
-    --dark-color: #000;
-}
-
 body {
     background: #080E0F;
-    overflow: hidden;
     padding: 0 20px;
-    
-
+      overflow: hidden;
 }
 
 main {
-      display: grid;
+display: grid;
   place-items: center;  
   height: 100vh;
 }
@@ -43,12 +37,22 @@ h3 {
 }
 
 #letter {
+    /* Remova 'display: none;' daqui */
     background: #f6efca;
-    width: 60%;
+    width: 90%;
     max-width: 1200px;
     padding: 2%;
+    opacity: 0;
+    visibility: hidden; /* Mantenha hidden para esconder visualmente */
+    transform: translateY(20px); /* Comece com um transform para a transição */
+    transition: opacity 0.8s ease-in, transform 0.8s ease-in, visibility 0.8s ease-in;
 }
 
+#letter.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 .border {
     border-style: dotted;
     display: flex;
